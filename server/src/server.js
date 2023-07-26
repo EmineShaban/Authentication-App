@@ -6,11 +6,11 @@ const routes = require('./routes')
 
 const app = express()
 
-mongoose.connect('mongodb://localhost:27017/first')
+mongoose.connect('mongodb://0.0.0.0:27017/')
     .then(() => {
         console.log('DB Connected')
     })
-    
+
 mongoose.connection.on('error', (error) => {
     console.log('DB Error: ', error)
 })
